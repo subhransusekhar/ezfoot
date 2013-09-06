@@ -1,0 +1,10 @@
+<?php if($msg){ ?><div class="message" >
+    <?php echo $msg; ?>
+</div><?php } ?>
+<div  class="container">
+    <form id="url-gen-form" method="post">
+    	<input type="hidden" name="do" value="generate"/>
+        <input name="url" type="text" value="insert your url" class="url-text" value="<?php echo $_POST['url'];?>" />
+        <input name="shorten" class="shorten-text" type="submit" value="Shorten" />
+    </form>
+</div>

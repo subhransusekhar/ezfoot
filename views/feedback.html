@@ -1,0 +1,20 @@
+<?php if($msg){
+        echo "<div class='message apply-cufon'>".$msg."</div>";
+}?>
+<div id="form">
+    <div id="form-content">
+        <form id="contacts-form"  method="post">
+            <input type="hidden" name="do" value="email"/>						<div class="field-row">
+		            <div class="field-name"><label>Your Name:</label></div>		
+		            <div class="field-input"><input name="name" type="text" value="<?php echo $_POST[name];?>"/></div>		            <div class="clear"></div>						</div>						<div class="field-row">
+		            <div class="field-name"><label>Your E-mail:</label></div>		
+		            <div class="field-input"><input name="email" type="text" value="<?php echo $_POST[email];?>" /></div>		            <div class="clear"></div>						</div>						<div class="field-row">
+		            <div class="field-name"><label>Subject:</label></div>		
+		            <div class="field-input"><input name="subject" type="text" value="<?php echo $_POST[subject];?>"/></div>		            <div class="clear"></div>						</div>						<div class="field-row">
+		            <div class="field-name"><label>Message:</label></div>		
+		            <div class="field-input"><textarea cols="58" rows="4" name="message" ><?php echo $_POST[message];?></textarea></div>		            <div class="clear"></div>						</div>						<div class="field-row">
+		            <div class="field-name"> <label>&nbsp;</label> </div>		
+		            <div class="field-input"><a class="submit-btn" onclick="jQuery('#contacts-form').submit()">Send</a></div>		            <div class="clear"></div>						</div>
+        </form>
+    </div>
+</div>

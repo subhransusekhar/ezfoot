@@ -1,0 +1,20 @@
+<?php if($msg){
+        echo "<div class='message'>".$msg."</div>";
+}?>
+<div id="form">
+    <div id="form-content">
+        <form id="contacts-form"  method="post">
+            <input type="hidden" name="do" value="register"/>												<div class="field-row">
+		            <div class="field-name"><label>Username:</label></div>		
+		            <div class="field-input"><input name="username" type="text" /></div>		            <div class="clear"></div>						</div>						<div class="field-row">
+		            <div class="field-name"><label>Your E-mail:</label></div>		
+		            <div class="field-input"><input name="email" type="text" /></div>		            <div class="clear"></div>						</div>						<div class="field-row">
+		            <div class="field-name"><label>Password:</label></div>		
+		            <div class="field-input"><input name="password" type="password" /></div>		            <div class="clear"></div>						</div>						<div class="field-row">
+		            <div class="field-name"><label>Retype Password:</label></div>		
+		            <div class="field-input"><input name="retypepassword" type="password" /></div>		            <div class="clear"></div>						</div>						<div class="field-row">
+		            <div class="field-name"> <label>&nbsp;</label> </div>		
+		            <div class="field-input"><a class="submit-btn">Register</a></div>		            <div class="clear"></div>						</div>
+        </form>
+    </div>
+</div>

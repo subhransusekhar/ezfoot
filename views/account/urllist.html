@@ -1,0 +1,63 @@
+<div class="zurl-form">
+	<div class="zurl-form-header">Url list</div>
+	<div class="zurl-form-content">
+		<table  width="100%">
+			<thead>
+				<tr style="background: #F9EA99;">
+					<th width="10%">Generated Code</th>
+					<th width="40%" >Url</th>
+					<th width="10%" >Hit</th>
+					<th width="10%">Date</th>
+					<th width="20%">Option</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan="4">
+					&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						Page: 
+						<?php 
+							if(!empty($page_count)){
+								
+								for($i = 1; $i <= $page_count+1; $i++){
+									echo '<a href="'.$this->generateUrl('account/urllist',array('page'=>$i)).'">'.$i.'</a> ';
+								}
+							}
+						?>
+					</td>
+				</tr>
+			</tfoot>
+			<tbody>
+			<?php 
+				if(!empty($data)){
+					$alt=1;
+					global $moduleObjs;
+					foreach($data as $row){
+						echo '<tr style="background: '.($alt%2?"":"#ddd").';">';
+							echo '<td>'.$row[generated_url].'</td>';
+							echo '<td><a target="_blank" href="'.$row[original_url].'">'.$row[original_url].'</a></td>';
+							echo '<td>';
+							if(!empty($moduleObjs['mod_tracker']))
+								echo $moduleObjs['mod_tracker']->hitCount($row[id]);
+							echo '</td>';
+							echo '<td>'.date('jS M Y', strtotime($row[date])).'</td>';
+							echo '<td>'.
+									'<a href="#delete">Delete</a> | '.
+									'<a href="#edit">Edit</a> | '.
+									'<a href="#edit">Status</a>'.
+								'</td>';
+						echo '</tr>';
+						$alt++;
+					}
+				}
+			?>
+			
+			</tbody>
+			
+		</table>
+	</div>
+</div>

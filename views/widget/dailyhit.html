@@ -1,0 +1,33 @@
+<div class="zurl-form zurl-form-size-large zurl-form-float-left zurl-form-margin-top-10 zurl-form-margin-lft-10" >
+	<div class="zurl-form-header">Today Hits</div>
+	<div class="zurl-form-content">
+		<?php 
+			global $moduleObjs;
+			if(!empty($moduleObjs['mod_tracker'])) {
+				 $hits = $moduleObjs['mod_tracker']->getdailyhits(10);
+				 ?>
+				 <table width="100%">
+				 	<tr>
+				 		<th>Url Code</th>
+				 		<th width="50%">Url</th>
+				 		<th >IP</th>
+				 		<th> Time</th>
+				 	</tr>
+				 <?php 
+				 foreach($hits as $hit){
+				 	?>
+				 	<tr>
+				 		<td><?php echo $hit['generated_url']?></td>
+				 		<td><a target="_blank" href="<?php echo $hit['original_url']?>"><?php echo $hit['original_url']?></a></td>
+				 		<td><?php echo $hit['ip']?></td>
+				 		<td><?php echo date('H:i a', strtotime($hit['date']));?></td>
+				 	</tr>
+				 	<?php 	
+				 }
+				 ?>
+				 </table>
+				 <?php 
+			}
+		?>
+	</div>
+</div>

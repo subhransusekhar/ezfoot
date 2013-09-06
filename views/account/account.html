@@ -1,0 +1,34 @@
+<div class="zurl-form">
+	<div class="zurl-form-header">This is me...</div>
+	<div class="zurl-form-content">
+		<form method="post">
+			<div class="zurl-form-row">
+				<div class="zurl-form-field-name">Username</div>
+				<div class="zurl-form-field">: <?php echo $username;?></div>
+				<div class="clear"></div>
+			</div>
+			<div class="zurl-form-row">
+				<div class="zurl-form-field-name">Email</div>
+				<div class="zurl-form-field">:<input type="text" name="email" value="<?php echo $email;?>"/></div>
+				<div class="clear"></div>
+			</div>
+			<div class="zurl-form-row">
+				<div class="zurl-form-field-name">First Nmae</div>
+				<div class="zurl-form-field">:<input type="text" name="first_name" value="<?php echo $first_name;?>"/></div>
+				<div class="clear"></div>
+			</div>
+			<div class="zurl-form-row">
+				<div class="zurl-form-field-name">Last Name</div>
+				<div class="zurl-form-field">:<input type="text" name="last_name" value="<?php echo $last_name;?>"/></div>
+				<div class="clear"></div>
+			</div>
+			<div class="zurl-form-row">
+				<div class="zurl-form-field zurl-form-field-login">
+					<input type="hidden" name="mod_login_action" value="update" />
+					<input type="submit" name="login" value="Save my info"/>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</form>
+	</div>
+</div>

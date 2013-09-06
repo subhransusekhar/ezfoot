@@ -1,0 +1,11 @@
+RewriteEngine on
+
+
+RewriteRule \.(css|jpe?g|gif|png|xml|swf)$ - [L]
+
+# only rewrite if request is not a real file
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# only rewrite if request is not a real directory
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L] 

@@ -1,0 +1,10 @@
+<div class="zurl-form zurl-form-size-small zurl-form-float-left zurl-form-margin-lft-10" >
+	<div class="zurl-form-header">Total Hit Count</div>
+	<div class="zurl-form-content">
+		<?php 
+			global $moduleObjs;
+			if(!empty($moduleObjs['mod_tracker']))
+				echo $moduleObjs['mod_tracker']->totalHitCount();
+		?>
+	</div>
+</div>
