@@ -1,4 +1,4 @@
-visualizer
+ezfoot
 ==========
 
-Come, Explore, Visualize, Share your Data
+A lightweight PHP framework
